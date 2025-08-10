@@ -25,19 +25,19 @@ public class AbyssBlocks {
             () -> new AbysstoneBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(3f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
 
-    public static final DeferredBlock<Block> SOMETHING_ORE = registerBlock("something_ore",
+    public static final DeferredBlock<Block> ABYSS_AMARYLLIUM_ORE = registerBlock("abyss_amaryllium_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(3.0f, 3.0f).requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
 
-    public static final DeferredBlock<Block> SOMETHING_BLOCK = registerBlock("something_block",
+    public static final DeferredBlock<Block> AMARYLLIUM_BLOCK = registerBlock("amaryllium_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE).instrument(NoteBlockInstrument.IRON_XYLOPHONE).strength(5F, 6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
-    public static final DeferredBlock<Block> THING_ORE = registerBlock("thing_ore",
+    public static final DeferredBlock<Block> ABYSS_CRIMSONITE_ORE = registerBlock("abyss_crimsonite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLUE).instrument(NoteBlockInstrument.BASEDRUM).strength(3.0f, 3.0f).requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
 
-    public static final DeferredBlock<Block> THING_BLOCK = registerBlock("thing_block",
+    public static final DeferredBlock<Block> CRIMSONITE_BLOCK = registerBlock("crimsonite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.IRON_XYLOPHONE).strength(5F, 6F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 

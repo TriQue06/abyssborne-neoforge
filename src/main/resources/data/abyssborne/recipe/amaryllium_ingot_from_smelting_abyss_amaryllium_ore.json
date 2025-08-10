@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "amaryllium",
+  "ingredient": {
+    "item": "abyssborne:abyss_amaryllium_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "abyssborne:amaryllium_ingot"
+  }
+}

@@ -19,10 +19,10 @@ public class AbyssBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(AbyssBlocks.ABYSSTONE);
-        blockWithItem(AbyssBlocks.SOMETHING_ORE);
-        blockWithItem(AbyssBlocks.SOMETHING_BLOCK);
-        blockWithItem(AbyssBlocks.THING_ORE);
-        blockWithItem(AbyssBlocks.THING_BLOCK);
+        blockWithItem(AbyssBlocks.ABYSS_AMARYLLIUM_ORE);
+        blockWithItem(AbyssBlocks.AMARYLLIUM_BLOCK);
+        blockWithItem(AbyssBlocks.ABYSS_CRIMSONITE_ORE);
+        blockWithItem(AbyssBlocks.CRIMSONITE_BLOCK);
 
         massBlockWithItem(AbyssBlocks.AZURE_NYLIUM_MASS);
         massBlockWithItem(AbyssBlocks.NIGHT_NYLIUM_MASS);

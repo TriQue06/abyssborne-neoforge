@@ -1,10 +1,10 @@
 {
   "values": [
     "abyssborne:abysstone",
-    "abyssborne:something_ore",
-    "abyssborne:something_block",
-    "abyssborne:thing_ore",
-    "abyssborne:thing_block",
+    "abyssborne:abyss_amaryllium_ore",
+    "abyssborne:amaryllium_block",
+    "abyssborne:abyss_crimsonite_ore",
+    "abyssborne:crimsonite_block",
     "abyssborne:night_nylium",
     "abyssborne:azure_nylium",
     "abyssborne:amber_nylium",

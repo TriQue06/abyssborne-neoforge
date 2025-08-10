@@ -3,10 +3,13 @@ package net.trique.abyssborne.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -37,10 +40,10 @@ public class AbyssItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(AbyssItems.RAW_SOMETHING.get());
-        basicItem(AbyssItems.SOMETHING_INGOT.get());
-        basicItem(AbyssItems.RAW_THING.get());
-        basicItem(AbyssItems.THING_INGOT.get());
+        basicItem(AbyssItems.RAW_AMARYLLIUM.get());
+        basicItem(AbyssItems.AMARYLLIUM_INGOT.get());
+        basicItem(AbyssItems.RAW_CRIMSONITE.get());
+        basicItem(AbyssItems.CRIMSONITE_INGOT.get());
         basicItem(AbyssItems.PURPLE_LAVA_BUCKET.get());
         basicItem(AbyssItems.STRANGE_SHARD.get());
         basicItem(AbyssItems.WEIRD_SHARD.get());
@@ -59,6 +62,31 @@ public class AbyssItemModelProvider extends ItemModelProvider {
         flatBlockItem(AbyssBlocks.STRANGE_CLUSTER);
         flatBlockItem(AbyssBlocks.WEIRD_CLUSTER);
         flatBlockItem(AbyssBlocks.ODD_CLUSTER);
+
+        basicItem(AbyssItems.CRIMSONITE_INGOT.get());
+        basicItem(AbyssItems.RAW_CRIMSONITE.get());
+        handheldItem(AbyssItems.CRIMSONITE_SWORD);
+        handheldItem(AbyssItems.CRIMSONITE_PICKAXE);
+        handheldItem(AbyssItems.CRIMSONITE_AXE);
+        handheldItem(AbyssItems.CRIMSONITE_SHOVEL);
+        handheldItem(AbyssItems.CRIMSONITE_HOE);
+        trimmedArmorItem(AbyssItems.CRIMSONITE_HELMET);
+        trimmedArmorItem(AbyssItems.CRIMSONITE_CHESTPLATE);
+        trimmedArmorItem(AbyssItems.CRIMSONITE_LEGGINGS);
+        trimmedArmorItem(AbyssItems.CRIMSONITE_BOOTS);
+
+        // === Amaryllium Items ===
+        basicItem(AbyssItems.AMARYLLIUM_INGOT.get());
+        basicItem(AbyssItems.RAW_AMARYLLIUM.get());
+        handheldItem(AbyssItems.AMARYLLIUM_SWORD);
+        handheldItem(AbyssItems.AMARYLLIUM_PICKAXE);
+        handheldItem(AbyssItems.AMARYLLIUM_AXE);
+        handheldItem(AbyssItems.AMARYLLIUM_SHOVEL);
+        handheldItem(AbyssItems.AMARYLLIUM_HOE);
+        trimmedArmorItem(AbyssItems.AMARYLLIUM_HELMET);
+        trimmedArmorItem(AbyssItems.AMARYLLIUM_CHESTPLATE);
+        trimmedArmorItem(AbyssItems.AMARYLLIUM_LEGGINGS);
+        trimmedArmorItem(AbyssItems.AMARYLLIUM_BOOTS);
     }
 
     private ItemModelBuilder handheldItem(DeferredItem<?> item) {
@@ -72,5 +100,46 @@ public class AbyssItemModelProvider extends ItemModelProvider {
         getBuilder(name)
                 .parent(getExistingFile(mcLoc("item/generated")))
                 .texture("layer0", modLoc("block/" + name));
+    }
+
+    private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferredItem) {
+        final String MOD_ID = Abyssborne.MODID;
+
+        if (itemDeferredItem.get() instanceof ArmorItem armorItem) {
+            trimMaterials.forEach((trimMaterial, value) -> {
+                float trimValue = value;
+
+                String armorType = switch (armorItem.getEquipmentSlot()) {
+                    case HEAD -> "helmet";
+                    case CHEST -> "chestplate";
+                    case LEGS -> "leggings";
+                    case FEET -> "boots";
+                    default -> "";
+                };
+
+                String armorItemPath = armorItem.toString();
+                String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
+                String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
+                ResourceLocation armorItemResLoc = ResourceLocation.parse(armorItemPath);
+                ResourceLocation trimResLoc = ResourceLocation.parse(trimPath);
+                ResourceLocation trimNameResLoc = ResourceLocation.parse(currentTrimName);
+
+                existingFileHelper.trackGenerated(trimResLoc, PackType.CLIENT_RESOURCES, ".png", "textures");
+
+                getBuilder(currentTrimName)
+                        .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                        .texture("layer0", armorItemResLoc.getNamespace() + ":item/" + armorItemResLoc.getPath())
+                        .texture("layer1", trimResLoc);
+
+                this.withExistingParent(itemDeferredItem.getId().getPath(),
+                                mcLoc("item/generated"))
+                        .override()
+                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace() + ":item/" + trimNameResLoc.getPath()))
+                        .predicate(mcLoc("trim_type"), trimValue).end()
+                        .texture("layer0",
+                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
+                                        "item/" + itemDeferredItem.getId().getPath()));
+            });
+        }
     }
 }

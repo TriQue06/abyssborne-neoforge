@@ -2,25 +2,40 @@
   "creativetab.abyssborne.abyss_items": "Abyss Items",
   "creativetab.abyssborne.abyss_blocks": "Abyss Blocks",
 
-  "item.abyssborne.raw_something": "Raw Something",
-  "item.abyssborne.something_ingot": "Something Ingot",
-
-  "item.abyssborne.raw_thing": "Raw Thing",
-  "item.abyssborne.thing_ingot": "Thing Ingot",
-
   "item.abyssborne.strange_shard": "Strange Shard",
   "item.abyssborne.weird_shard": "Weird Shard",
   "item.abyssborne.odd_shard": "Odd Shard",
 
   "item.abyssborne.purple_lava_bucket": "Purple Lava",
 
-  "block.abyssborne.purple_lava": "Purple Lava",
+  "item.abyssborne.raw_amaryllium": "Raw Amaryllium",
+  "item.abyssborne.raw_crimsonite": "Raw Crimsonite",
+  "item.abyssborne.amaryllium_ingot": "Amaryllium Ingot",
+  "item.abyssborne.crimsonite_ingot": "Crimsonite Ingot",
 
-  "block.abyssborne.abysstone": "Abysstone",
-  "block.abyssborne.something_ore": "Something Ore",
-  "block.abyssborne.something_block": "Block of Something",
-  "block.abyssborne.thing_ore": "Thing Ore",
-  "block.abyssborne.thing_block": "Block of Thing",
+  "item.abyssborne.amaryllium_sword": "Amaryllium Sword",
+  "item.abyssborne.amaryllium_pickaxe": "Amaryllium Pickaxe",
+  "item.abyssborne.amaryllium_axe": "Amaryllium Axe",
+  "item.abyssborne.amaryllium_shovel": "Amaryllium Shovel",
+  "item.abyssborne.amaryllium_hoe": "Amaryllium Hoe",
+
+  "item.abyssborne.amaryllium_helmet": "Amaryllium Helmet",
+  "item.abyssborne.amaryllium_chestplate": "Amaryllium Chestplate",
+  "item.abyssborne.amaryllium_leggings": "Amaryllium Leggings",
+  "item.abyssborne.amaryllium_boots": "Amaryllium Boots",
+
+  "item.abyssborne.crimsonite_sword": "Crimsonite Sword",
+  "item.abyssborne.crimsonite_pickaxe": "Crimsonite Pickaxe",
+  "item.abyssborne.crimsonite_axe": "Crimsonite Axe",
+  "item.abyssborne.crimsonite_shovel": "Crimsonite Shovel",
+  "item.abyssborne.crimsonite_hoe": "Crimsonite Hoe",
+
+  "item.abyssborne.crimsonite_helmet": "Crimsonite Helmet",
+  "item.abyssborne.crimsonite_chestplate": "Crimsonite Chestplate",
+  "item.abyssborne.crimsonite_leggings": "Crimsonite Leggings",
+  "item.abyssborne.crimsonite_boots": "Crimsonite Boots",
+
+  "block.abyssborne.purple_lava": "Purple Lava",
 
   "block.abyssborne.azure_nylium": "Azure Nylium",
   "block.abyssborne.night_nylium": "Night Nylium",
@@ -41,6 +56,11 @@
   "block.abyssborne.strange_cluster": "Strange Cluster",
   "block.abyssborne.weird_cluster": "Weird Cluster",
   "block.abyssborne.odd_cluster": "Odd Cluster",
+
+  "block.abyssborne.abyss_crimsonite_ore": "Abyss Crimsonite Ore",
+  "block.abyssborne.abyss_amaryllium_ore": "Abyss Amaryllium Ore",
+  "block.abyssborne.amaryllium_block": "Block of Amaryllium",
+  "block.abyssborne.crimsonite_block": "Block of Crimsonite",
 
   "fluid.abyssborne.purple_lava": "Purple Lava",
   "fluid.abyssborne.flowing_purple_lava": "Flowing Purple Lava"

@@ -13,8 +13,8 @@ import net.trique.abyssborne.Abyssborne;
 import net.trique.abyssborne.tag.AbyssBiomeTags;
 
 public class AbyssBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_SOMETHING_ORE = registerKey("add_something_ore");
-    public static final ResourceKey<BiomeModifier> ADD_THING_ORE = registerKey("add_thing_ore");
+    public static final ResourceKey<BiomeModifier> ADD_AMARYLLIUM_ORE = registerKey("add_amaryllium_ore");
+    public static final ResourceKey<BiomeModifier> ADD_CRIMSONITE_ORE = registerKey("add_crimsonite_ore");
 
     public static final ResourceKey<BiomeModifier> ADD_NIGHT_ROOTS = registerKey("add_night_roots");
     public static final ResourceKey<BiomeModifier> ADD_AZURE_ROOTS = registerKey("add_azure_roots");
@@ -36,19 +36,18 @@ public class AbyssBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NIGHT_MASS = registerKey("add_night_mass");
     public static final ResourceKey<BiomeModifier> ADD_AMBER_MASS = registerKey("add_amber_mass");
 
-
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_SOMETHING_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_AMARYLLIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(AbyssBiomeTags.IS_ABYSS),
-                HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.SOMETHING_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.AMARYLLIUM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_THING_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_CRIMSONITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(AbyssBiomeTags.IS_ABYSS),
-                HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.THING_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.CRIMSONITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_NIGHT_ROOTS, new BiomeModifiers.AddFeaturesBiomeModifier(
@@ -110,17 +109,17 @@ public class AbyssBiomeModifiers {
                 biomes.getOrThrow(AbyssBiomeTags.IS_CRYSTAL_CANYON),
                 HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.ODD_CLUSTER_PLACED)),
                 GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
-        
+
         context.register(ADD_AZURE_MASS, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(AbyssBiomeTags.IS_AZURE_GROVE),
                 HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.AZURE_MASS_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-        
+
         context.register(ADD_NIGHT_MASS, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(AbyssBiomeTags.IS_NIGHT_GROVE),
                 HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.NIGHT_MASS_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-        
+
         context.register(ADD_AMBER_MASS, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(AbyssBiomeTags.IS_AMBER_GROVE),
                 HolderSet.direct(placedFeatures.getOrThrow(AbyssPlacedFeatures.AMBER_MASS_PLACED_KEY)),
@@ -128,6 +127,9 @@ public class AbyssBiomeModifiers {
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Abyssborne.MODID, name));
+        return ResourceKey.create(
+                NeoForgeRegistries.Keys.BIOME_MODIFIERS,
+                ResourceLocation.fromNamespaceAndPath(Abyssborne.MODID, name)
+        );
     }
 }

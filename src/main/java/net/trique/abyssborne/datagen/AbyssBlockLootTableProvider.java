@@ -27,8 +27,8 @@ public class AbyssBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(AbyssBlocks.ABYSSTONE.get());
-        dropSelf(AbyssBlocks.SOMETHING_BLOCK.get());
-        dropSelf(AbyssBlocks.THING_BLOCK.get());
+        dropSelf(AbyssBlocks.AMARYLLIUM_BLOCK.get());
+        dropSelf(AbyssBlocks.CRIMSONITE_BLOCK.get());
         dropSelf(AbyssBlocks.AZURE_NYLIUM_MASS.get());
         dropSelf(AbyssBlocks.NIGHT_NYLIUM_MASS.get());
         dropSelf(AbyssBlocks.AMBER_NYLIUM_MASS.get());
@@ -52,10 +52,10 @@ public class AbyssBlockLootTableProvider extends BlockLootSubProvider {
                 ));
 
         // Cevherler
-        add(AbyssBlocks.SOMETHING_ORE.get(),
-                b -> createOreDrop(AbyssBlocks.SOMETHING_ORE.get(), AbyssItems.RAW_SOMETHING.get()));
-        add(AbyssBlocks.THING_ORE.get(),
-                b -> createOreDrop(AbyssBlocks.THING_ORE.get(), AbyssItems.RAW_THING.get()));
+        add(AbyssBlocks.ABYSS_AMARYLLIUM_ORE.get(),
+                b -> createOreDrop(AbyssBlocks.ABYSS_AMARYLLIUM_ORE.get(), AbyssItems.RAW_AMARYLLIUM.get()));
+        add(AbyssBlocks.ABYSS_CRIMSONITE_ORE.get(),
+                b -> createOreDrop(AbyssBlocks.ABYSS_CRIMSONITE_ORE.get(), AbyssItems.RAW_CRIMSONITE.get()));
 
         if (AbyssBlocks.NIGHT_ROOTS != null) dropSelf(AbyssBlocks.NIGHT_ROOTS.get());
         if (AbyssBlocks.AZURE_ROOTS != null) dropSelf(AbyssBlocks.AZURE_ROOTS.get());

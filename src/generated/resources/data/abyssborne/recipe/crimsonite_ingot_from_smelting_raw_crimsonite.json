@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "crimsonite",
+  "ingredient": {
+    "item": "abyssborne:raw_crimsonite"
+  },
+  "result": {
+    "count": 1,
+    "id": "abyssborne:crimsonite_ingot"
+  }
+}

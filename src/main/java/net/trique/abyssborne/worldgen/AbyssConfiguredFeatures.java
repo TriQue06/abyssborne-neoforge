@@ -19,8 +19,8 @@ import net.trique.abyssborne.block.AbyssBlocks;
 import java.util.List;
 
 public class AbyssConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SOMETHING_ORE_KEY = registerKey("something_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> THING_ORE_KEY     = registerKey("thing_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARYLLIUM_ORE_KEY = registerKey("amaryllium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRIMSONITE_ORE_KEY = registerKey("crimsonite_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NIGHT_ROOTS_PATCH = registerKey("night_roots_patch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AZURE_ROOTS_PATCH = registerKey("azure_roots_patch");
@@ -45,11 +45,11 @@ public class AbyssConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest abyssReplaceables = new BlockMatchTest(AbyssBlocks.ABYSSTONE.get());
 
-        register(context, SOMETHING_ORE_KEY, Feature.ORE,
-                new OreConfiguration(abyssReplaceables, AbyssBlocks.SOMETHING_ORE.get().defaultBlockState(), 5));
+        register(context, AMARYLLIUM_ORE_KEY, Feature.ORE,
+                new OreConfiguration(abyssReplaceables, AbyssBlocks.ABYSS_AMARYLLIUM_ORE.get().defaultBlockState(), 4));
 
-        register(context, THING_ORE_KEY, Feature.ORE,
-                new OreConfiguration(abyssReplaceables, AbyssBlocks.THING_ORE.get().defaultBlockState(), 5));
+        register(context, CRIMSONITE_ORE_KEY, Feature.ORE,
+                new OreConfiguration(abyssReplaceables, AbyssBlocks.ABYSS_CRIMSONITE_ORE.get().defaultBlockState(), 4));
 
         FeatureUtils.register(
                 context, NIGHT_ROOTS_PATCH, Feature.RANDOM_PATCH,

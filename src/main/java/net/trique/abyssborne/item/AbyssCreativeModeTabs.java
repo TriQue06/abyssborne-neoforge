@@ -17,17 +17,37 @@ public class AbyssCreativeModeTabs {
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Abyssborne.MODID);
 
     public static final Supplier<CreativeModeTab> ABYSS_ITEMS_TAB = CREATIVE_MODE_TAB.register("abyss_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(AbyssItems.SOMETHING_INGOT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(AbyssItems.AMARYLLIUM_INGOT.get()))
                     .title(Component.translatable("creativetab.abyssborne.abyss_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(AbyssItems.RAW_SOMETHING);
-                        output.accept(AbyssItems.SOMETHING_INGOT);
-                        output.accept(AbyssItems.RAW_THING);
-                        output.accept(AbyssItems.THING_INGOT);
                         output.accept(AbyssItems.PURPLE_LAVA_BUCKET);
                         output.accept(AbyssItems.STRANGE_SHARD);
                         output.accept(AbyssItems.WEIRD_SHARD);
                         output.accept(AbyssItems.ODD_SHARD);
+
+                        output.accept(AbyssItems.CRIMSONITE_INGOT.get());
+                        output.accept(AbyssItems.RAW_CRIMSONITE.get());
+                        output.accept(AbyssItems.CRIMSONITE_SWORD.get());
+                        output.accept(AbyssItems.CRIMSONITE_PICKAXE.get());
+                        output.accept(AbyssItems.CRIMSONITE_AXE.get());
+                        output.accept(AbyssItems.CRIMSONITE_SHOVEL.get());
+                        output.accept(AbyssItems.CRIMSONITE_HOE.get());
+                        output.accept(AbyssItems.CRIMSONITE_HELMET.get());
+                        output.accept(AbyssItems.CRIMSONITE_CHESTPLATE.get());
+                        output.accept(AbyssItems.CRIMSONITE_LEGGINGS.get());
+                        output.accept(AbyssItems.CRIMSONITE_BOOTS.get());
+
+                        output.accept(AbyssItems.AMARYLLIUM_INGOT.get());
+                        output.accept(AbyssItems.RAW_AMARYLLIUM.get());
+                        output.accept(AbyssItems.AMARYLLIUM_SWORD.get());
+                        output.accept(AbyssItems.AMARYLLIUM_PICKAXE.get());
+                        output.accept(AbyssItems.AMARYLLIUM_AXE.get());
+                        output.accept(AbyssItems.AMARYLLIUM_SHOVEL.get());
+                        output.accept(AbyssItems.AMARYLLIUM_HOE.get());
+                        output.accept(AbyssItems.AMARYLLIUM_HELMET.get());
+                        output.accept(AbyssItems.AMARYLLIUM_CHESTPLATE.get());
+                        output.accept(AbyssItems.AMARYLLIUM_LEGGINGS.get());
+                        output.accept(AbyssItems.AMARYLLIUM_BOOTS.get());
                     }).build());
 
     public static final Supplier<CreativeModeTab> ABYSS_BLOCKS_TAB = CREATIVE_MODE_TAB.register("abyss_blocks_tab",
@@ -36,10 +56,10 @@ public class AbyssCreativeModeTabs {
                     .title(Component.translatable("creativetab.abyssborne.abyss_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(AbyssBlocks.ABYSSTONE);
-                        output.accept(AbyssBlocks.SOMETHING_ORE);
-                        output.accept(AbyssBlocks.SOMETHING_BLOCK);
-                        output.accept(AbyssBlocks.THING_ORE);
-                        output.accept(AbyssBlocks.THING_BLOCK);
+                        output.accept(AbyssBlocks.ABYSS_AMARYLLIUM_ORE);
+                        output.accept(AbyssBlocks.AMARYLLIUM_BLOCK);
+                        output.accept(AbyssBlocks.ABYSS_CRIMSONITE_ORE);
+                        output.accept(AbyssBlocks.CRIMSONITE_BLOCK);
                         output.accept(AbyssBlocks.NIGHT_NYLIUM);
                         output.accept(AbyssBlocks.AZURE_NYLIUM);
                         output.accept(AbyssBlocks.AMBER_NYLIUM);

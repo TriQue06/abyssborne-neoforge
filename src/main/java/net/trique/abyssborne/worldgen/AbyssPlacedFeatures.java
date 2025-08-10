@@ -15,8 +15,8 @@ import java.util.List;
 
 public class AbyssPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> SOMETHING_ORE_PLACED_KEY = registerKey("something_ore_placed");
-    public static final ResourceKey<PlacedFeature> THING_ORE_PLACED_KEY     = registerKey("thing_ore_placed");
+    public static final ResourceKey<PlacedFeature> AMARYLLIUM_ORE_PLACED_KEY = registerKey("amaryllium_ore_placed");
+    public static final ResourceKey<PlacedFeature> CRIMSONITE_ORE_PLACED_KEY = registerKey("crimsonite_ore_placed");
 
     public static final ResourceKey<PlacedFeature> NIGHT_ROOTS_PLACED = registerKey("night_roots_placed");
     public static final ResourceKey<PlacedFeature> AZURE_ROOTS_PLACED = registerKey("azure_roots_placed");
@@ -34,24 +34,24 @@ public class AbyssPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WEIRD_CLUSTER_PLACED = registerKey("weird_cluster_placed");
     public static final ResourceKey<PlacedFeature> ODD_CLUSTER_PLACED = registerKey("odd_cluster_placed");
 
-    public static final ResourceKey<PlacedFeature> AZURE_MASS_PLACED_KEY     = registerKey("azure_mass_placed");
-    public static final ResourceKey<PlacedFeature> NIGHT_MASS_PLACED_KEY     = registerKey("night_mass_placed");
-    public static final ResourceKey<PlacedFeature> AMBER_MASS_PLACED_KEY     = registerKey("amber_mass_placed");
+    public static final ResourceKey<PlacedFeature> AZURE_MASS_PLACED_KEY = registerKey("azure_mass_placed");
+    public static final ResourceKey<PlacedFeature> NIGHT_MASS_PLACED_KEY = registerKey("night_mass_placed");
+    public static final ResourceKey<PlacedFeature> AMBER_MASS_PLACED_KEY = registerKey("amber_mass_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configured = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, SOMETHING_ORE_PLACED_KEY,
-                configured.getOrThrow(AbyssConfiguredFeatures.SOMETHING_ORE_KEY),
+        register(context, AMARYLLIUM_ORE_PLACED_KEY,
+                configured.getOrThrow(AbyssConfiguredFeatures.AMARYLLIUM_ORE_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        50, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
+                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
                 )
         );
 
-        register(context, THING_ORE_PLACED_KEY,
-                configured.getOrThrow(AbyssConfiguredFeatures.THING_ORE_KEY),
+        register(context, CRIMSONITE_ORE_PLACED_KEY,
+                configured.getOrThrow(AbyssConfiguredFeatures.CRIMSONITE_ORE_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        50, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
+                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
                 )
         );
 
@@ -118,21 +118,21 @@ public class AbyssPlacedFeatures {
         register(context, AZURE_MASS_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.AZURE_MASS_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        48, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
                 )
         );
 
         register(context, NIGHT_MASS_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.NIGHT_MASS_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        48, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
                 )
         );
 
         register(context, AMBER_MASS_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.AMBER_MASS_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        48, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
                 )
         );
     }
