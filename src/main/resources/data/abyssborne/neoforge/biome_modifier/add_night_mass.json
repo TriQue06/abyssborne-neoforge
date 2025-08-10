@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#abyssborne:is_night_grove",
+  "features": "abyssborne:night_mass_placed",
+  "step": "underground_ores"
+}

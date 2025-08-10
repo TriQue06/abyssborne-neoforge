@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "abyssborne:abyss_wastes",
+    "abyssborne:crystal_canyon",
+    "abyssborne:azure_grove",
+    "abyssborne:night_grove",
+    "abyssborne:amber_grove"
+  ]
+}

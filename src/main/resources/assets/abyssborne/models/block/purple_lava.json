@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/lava",
+  "textures": {
+    "still": "abyssborne:block/purple_lava_still",
+    "flow": "abyssborne:block/purple_lava_flow"
+  }
+}

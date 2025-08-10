@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#abyssborne:is_azure_grove",
+  "features": "abyssborne:azure_roots_placed",
+  "step": "vegetal_decoration"
+}

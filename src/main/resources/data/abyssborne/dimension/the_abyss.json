@@ -1,0 +1,138 @@
+{
+  "type": "abyssborne:the_abyss",
+  "generator": {
+    "settings": "abyssborne:the_abyss",
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "abyssborne:night_grove",
+          "parameters": {
+            "temperature": [
+              -0.6,
+              -0.2
+            ],
+            "humidity": [
+              -0.9,
+              0.2
+            ],
+            "continentalness": 0,
+            "erosion": [
+              -1,
+              -0.3
+            ],
+            "depth": 0,
+            "weirdness": [
+              -1,
+              -0.48
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "abyssborne:crystal_canyon",
+          "parameters": {
+            "temperature": [
+              -0.4,
+              -0.1
+            ],
+            "humidity": [
+              -0.2,
+              0.2
+            ],
+            "continentalness": [
+              0,
+              0.8
+            ],
+            "erosion": [
+              0.4,
+              0.6
+            ],
+            "depth": 0,
+            "weirdness": [
+              -0.9,
+              -0.33
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "abyssborne:azure_grove",
+          "parameters": {
+            "temperature": [
+              -0.2,
+              0.4
+            ],
+            "humidity": [
+              0.2,
+              0.8
+            ],
+            "continentalness": [
+              -0.2,
+              0.5
+            ],
+            "erosion": [
+              0,
+              0.6
+            ],
+            "depth": 0,
+            "weirdness": [
+              -0.8,
+              -0.5
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "abyssborne:abyss_wastes",
+          "parameters": {
+            "temperature": [
+              -0.5,
+              0
+            ],
+            "humidity": [
+              0,
+              0.5
+            ],
+            "continentalness": [
+              -0.1,
+              0.3
+            ],
+            "erosion": [
+              -0.4,
+              0.2
+            ],
+            "depth": 0,
+            "weirdness": [
+              -0.85,
+              -0.5
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "abyssborne:amber_grove",
+          "parameters": {
+            "temperature": [
+              0.7,
+              0.8
+            ],
+            "humidity": [
+              0.1,
+              0.6
+            ],
+            "continentalness": 0,
+            "erosion": [
+              -0.3,
+              0.3
+            ],
+            "depth": 0,
+            "weirdness": 0.3,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "creativetab.abyssborne.abyss_items": "Abyss Items",
+  "creativetab.abyssborne.abyss_blocks": "Abyss Blocks",
+
+  "item.abyssborne.raw_something": "Raw Something",
+  "item.abyssborne.something_ingot": "Something Ingot",
+
+  "item.abyssborne.raw_thing": "Raw Thing",
+  "item.abyssborne.thing_ingot": "Thing Ingot",
+
+  "item.abyssborne.strange_shard": "Strange Shard",
+  "item.abyssborne.weird_shard": "Weird Shard",
+  "item.abyssborne.odd_shard": "Odd Shard",
+
+  "item.abyssborne.purple_lava_bucket": "Purple Lava",
+
+  "block.abyssborne.purple_lava": "Purple Lava",
+
+  "block.abyssborne.abysstone": "Abysstone",
+  "block.abyssborne.something_ore": "Something Ore",
+  "block.abyssborne.something_block": "Block of Something",
+  "block.abyssborne.thing_ore": "Thing Ore",
+  "block.abyssborne.thing_block": "Block of Thing",
+
+  "block.abyssborne.azure_nylium": "Azure Nylium",
+  "block.abyssborne.night_nylium": "Night Nylium",
+  "block.abyssborne.amber_nylium": "Amber Nylium",
+
+  "block.abyssborne.night_roots": "Night Roots",
+  "block.abyssborne.azure_roots": "Azure Roots",
+  "block.abyssborne.amber_roots": "Amber Roots",
+
+  "block.abyssborne.night_fungus": "Night Fungus",
+  "block.abyssborne.azure_fungus": "Azure Fungus",
+  "block.abyssborne.amber_fungus": "Amber Fungus",
+
+  "block.abyssborne.night_bush": "Night Bush",
+  "block.abyssborne.azure_bush": "Azure Bush",
+  "block.abyssborne.amber_bush": "Amber Bush",
+
+  "block.abyssborne.strange_cluster": "Strange Cluster",
+  "block.abyssborne.weird_cluster": "Weird Cluster",
+  "block.abyssborne.odd_cluster": "Odd Cluster",
+
+  "fluid.abyssborne.purple_lava": "Purple Lava",
+  "fluid.abyssborne.flowing_purple_lava": "Flowing Purple Lava"
+}
