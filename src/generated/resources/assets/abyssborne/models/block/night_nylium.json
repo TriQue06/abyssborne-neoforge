@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "abyssborne:block/abysstone",
-    "side": "abyssborne:block/night_nylium_side",
-    "top": "abyssborne:block/night_nylium"
-  }
-}

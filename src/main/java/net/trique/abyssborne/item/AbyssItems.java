@@ -14,11 +14,11 @@ public class AbyssItems {
             () -> new BucketItem(AbyssFluids.PURPLE_LAVA, (new Item.Properties()).craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static final DeferredItem<Item> STRANGE_SHARD = ITEMS.register("strange_shard",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(AbyssFoodProperties.STRANGE_FOOD)));
     public static final DeferredItem<Item> WEIRD_SHARD = ITEMS.register("weird_shard",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(AbyssFoodProperties.WEIRD_FOOD)));
     public static final DeferredItem<Item> ODD_SHARD = ITEMS.register("odd_shard",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(AbyssFoodProperties.ODD_FOOD)));
 
     public static final DeferredItem<Item> CRIMSONITE_INGOT = ITEMS.register("crimsonite_ingot",
             () -> new Item(new Item.Properties()));
@@ -43,16 +43,16 @@ public class AbyssItems {
 
     public static final DeferredItem<ArmorItem> CRIMSONITE_HELMET = ITEMS.register("crimsonite_helmet",
             () -> new ArmorItem(AbyssArmorMaterials.CRIMSONITE, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(34))));
     public static final DeferredItem<ArmorItem> CRIMSONITE_CHESTPLATE = ITEMS.register("crimsonite_chestplate",
             () -> new ArmorItem(AbyssArmorMaterials.CRIMSONITE, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(34))));
     public static final DeferredItem<ArmorItem> CRIMSONITE_LEGGINGS = ITEMS.register("crimsonite_leggings",
             () -> new ArmorItem(AbyssArmorMaterials.CRIMSONITE, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(34))));
     public static final DeferredItem<ArmorItem> CRIMSONITE_BOOTS = ITEMS.register("crimsonite_boots",
             () -> new ArmorItem(AbyssArmorMaterials.CRIMSONITE, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(34))));
 
     public static final DeferredItem<Item> AMARYLLIUM_INGOT = ITEMS.register("amaryllium_ingot",
             () -> new Item(new Item.Properties()));
@@ -77,16 +77,16 @@ public class AbyssItems {
 
     public static final DeferredItem<ArmorItem> AMARYLLIUM_HELMET = ITEMS.register("amaryllium_helmet",
             () -> new ArmorItem(AbyssArmorMaterials.AMARYLLIUM, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(34))));
     public static final DeferredItem<ArmorItem> AMARYLLIUM_CHESTPLATE = ITEMS.register("amaryllium_chestplate",
             () -> new ArmorItem(AbyssArmorMaterials.AMARYLLIUM, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(34))));
     public static final DeferredItem<ArmorItem> AMARYLLIUM_LEGGINGS = ITEMS.register("amaryllium_leggings",
             () -> new ArmorItem(AbyssArmorMaterials.AMARYLLIUM, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(34))));
     public static final DeferredItem<ArmorItem> AMARYLLIUM_BOOTS = ITEMS.register("amaryllium_boots",
             () -> new ArmorItem(AbyssArmorMaterials.AMARYLLIUM, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(34))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

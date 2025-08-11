@@ -44,14 +44,14 @@ public class AbyssPlacedFeatures {
         register(context, AMARYLLIUM_ORE_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.AMARYLLIUM_ORE_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
+                        15, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
                 )
         );
 
         register(context, CRIMSONITE_ORE_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.CRIMSONITE_ORE_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
+                        15, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(96))
                 )
         );
 
@@ -118,21 +118,21 @@ public class AbyssPlacedFeatures {
         register(context, AZURE_MASS_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.AZURE_MASS_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+                        30, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
                 )
         );
 
         register(context, NIGHT_MASS_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.NIGHT_MASS_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+                        30, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
                 )
         );
 
         register(context, AMBER_MASS_PLACED_KEY,
                 configured.getOrThrow(AbyssConfiguredFeatures.AMBER_MASS_KEY),
                 AbyssOrePlacement.commonOrePlacement(
-                        32, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+                        30, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
                 )
         );
     }
