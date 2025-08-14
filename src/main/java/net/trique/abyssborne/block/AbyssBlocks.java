@@ -200,35 +200,26 @@ public class AbyssBlocks {
     public static final DeferredBlock<Block> ODD_CLUSTER = registerBlock("odd_cluster",
             () -> new AmethystClusterBlock(7.0F, 3.0F, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).forceSolidOn().noOcclusion().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F).lightLevel(state -> 12).pushReaction(PushReaction.DESTROY).requiresCorrectToolForDrops()));
 
-    public static final DeferredBlock<Block> AZURE_NYLIUM_MASS = registerBlock("azure_nylium_mass",
+    public static final DeferredBlock<Block> AZURE_WART_BLOCK = registerBlock("azure_wart_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_LIGHT_BLUE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(0.4F)
-                    .sound(SoundType.NYLIUM)
-                    .lightLevel(state -> 12)
-                    .randomTicks()));
+                    .strength(1.0F, 3.0F)
+                    .sound(SoundType.NETHER_WART)));
 
-    public static final DeferredBlock<Block> NIGHT_NYLIUM_MASS = registerBlock("night_nylium_mass",
+    public static final DeferredBlock<Block> NIGHT_WART_BLOCK = registerBlock("night_wart_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(0.4F)
-                    .sound(SoundType.NYLIUM)
-                    .lightLevel(state -> 12)
-                    .randomTicks()));
+                    .strength(1.0F, 3.0F)
+                    .sound(SoundType.NETHER_WART)));
 
-    public static final DeferredBlock<Block> AMBER_NYLIUM_MASS = registerBlock("amber_nylium_mass",
+    public static final DeferredBlock<Block> AMBER_WART_BLOCK = registerBlock("amber_wart_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
-                    .requiresCorrectToolForDrops()
-                    .strength(0.4F)
-                    .sound(SoundType.NYLIUM)
-                    .lightLevel(state -> 12)
-                    .randomTicks()));
+                    .strength(1.0F, 3.0F)
+                    .sound(SoundType.NETHER_WART)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

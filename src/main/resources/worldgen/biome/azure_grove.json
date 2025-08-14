@@ -1,0 +1,65 @@
+{
+  "carvers": {
+    "air": "minecraft:nether_cave"
+  },
+  "downfall": 0.0,
+  "effects": {
+    "additions_sound": {
+      "sound": "minecraft:ambient.warped_forest.additions",
+      "tick_chance": 0.01
+    },
+    "ambient_sound": "minecraft:ambient.warped_forest.loop",
+    "fog_color": 704240,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.warped_forest.mood",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 12000,
+      "min_delay": 6000,
+      "replace_current_music": false,
+      "sound": "abyssborne:cliff"
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:nautilus"
+      },
+      "probability": 0.01
+    },
+    "sky_color": 704240,
+    "water_color": 704240,
+    "water_fog_color": 704240
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["abyssborne:azure_roots_placed", "abyssborne:azure_fungus_placed", "abyssborne:azure_bush_placed"],
+    [],
+    [],
+    [],
+    []
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {
+    "minecraft:enderman": {
+      "charge": 1.0,
+      "energy_budget": 0.12
+    }
+  },
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.0
+}

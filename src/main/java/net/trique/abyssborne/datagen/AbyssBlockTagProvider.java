@@ -29,10 +29,12 @@ public class AbyssBlockTagProvider extends BlockTagsProvider {
                 .add(AbyssBlocks.AMBER_NYLIUM.get())
                 .add(AbyssBlocks.STRANGE_CLUSTER.get())
                 .add(AbyssBlocks.WEIRD_CLUSTER.get())
-                .add(AbyssBlocks.ODD_CLUSTER.get())
-                .add(AbyssBlocks.AZURE_NYLIUM_MASS.get())
-                .add(AbyssBlocks.NIGHT_NYLIUM_MASS.get())
-                .add(AbyssBlocks.AMBER_NYLIUM_MASS.get());
+                .add(AbyssBlocks.ODD_CLUSTER.get());
+
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(AbyssBlocks.AZURE_WART_BLOCK.get())
+                .add(AbyssBlocks.NIGHT_WART_BLOCK.get())
+                .add(AbyssBlocks.AMBER_WART_BLOCK.get());
 
         tag(BlockTags.CRYSTAL_SOUND_BLOCKS)
                 .add(AbyssBlocks.STRANGE_CLUSTER.get())
@@ -50,9 +52,6 @@ public class AbyssBlockTagProvider extends BlockTagsProvider {
                 .add(AbyssBlocks.AMBER_NYLIUM.get())
                 .add(AbyssBlocks.STRANGE_CLUSTER.get())
                 .add(AbyssBlocks.WEIRD_CLUSTER.get())
-                .add(AbyssBlocks.ODD_CLUSTER.get())
-                .add(AbyssBlocks.AZURE_NYLIUM_MASS.get())
-                .add(AbyssBlocks.NIGHT_NYLIUM_MASS.get())
-                .add(AbyssBlocks.AMBER_NYLIUM_MASS.get());
+                .add(AbyssBlocks.ODD_CLUSTER.get());
     }
 }

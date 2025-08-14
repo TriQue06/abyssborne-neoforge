@@ -23,10 +23,9 @@ public class AbyssBlockStateProvider extends BlockStateProvider {
         blockWithItem(AbyssBlocks.AMARYLLIUM_BLOCK);
         blockWithItem(AbyssBlocks.ABYSS_CRIMSONITE_ORE);
         blockWithItem(AbyssBlocks.CRIMSONITE_BLOCK);
-
-        massBlockWithItem(AbyssBlocks.AZURE_NYLIUM_MASS);
-        massBlockWithItem(AbyssBlocks.NIGHT_NYLIUM_MASS);
-        massBlockWithItem(AbyssBlocks.AMBER_NYLIUM_MASS);
+        blockWithItem(AbyssBlocks.AZURE_WART_BLOCK);
+        blockWithItem(AbyssBlocks.NIGHT_WART_BLOCK);
+        blockWithItem(AbyssBlocks.AMBER_WART_BLOCK);
 
         nyliumBlockWithItem(AbyssBlocks.AZURE_NYLIUM, "abysstone");
         nyliumBlockWithItem(AbyssBlocks.NIGHT_NYLIUM, "abysstone");
@@ -107,14 +106,5 @@ public class AbyssBlockStateProvider extends BlockStateProvider {
                             .rotationY(yRot)
                             .build();
                 }, BlockStateProperties.WATERLOGGED);
-    }
-
-    private void massBlockWithItem(DeferredBlock<?> block) {
-        String name = block.getId().getPath();
-        String nyliumTex = name.replace("_nylium_mass", "_nylium");
-        simpleBlockWithItem(
-                block.get(),
-                models().cubeAll(name, modLoc("block/" + nyliumTex))
-        );
     }
 }

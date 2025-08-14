@@ -16,7 +16,6 @@ import java.util.concurrent.CompletableFuture;
 
 public class AbyssDatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-
             .add(Registries.CONFIGURED_FEATURE, AbyssConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, AbyssPlacedFeatures::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, AbyssBiomeModifiers::bootstrap);

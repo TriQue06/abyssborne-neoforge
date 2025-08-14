@@ -29,9 +29,18 @@ public class AbyssBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(AbyssBlocks.ABYSSTONE.get());
         dropSelf(AbyssBlocks.AMARYLLIUM_BLOCK.get());
         dropSelf(AbyssBlocks.CRIMSONITE_BLOCK.get());
-        dropSelf(AbyssBlocks.AZURE_NYLIUM_MASS.get());
-        dropSelf(AbyssBlocks.NIGHT_NYLIUM_MASS.get());
-        dropSelf(AbyssBlocks.AMBER_NYLIUM_MASS.get());
+        dropSelf(AbyssBlocks.AZURE_WART_BLOCK.get());
+        dropSelf(AbyssBlocks.NIGHT_WART_BLOCK.get());
+        dropSelf(AbyssBlocks.AMBER_WART_BLOCK.get());
+        dropSelf(AbyssBlocks.NIGHT_ROOTS.get());
+        dropSelf(AbyssBlocks.AZURE_ROOTS.get());
+        dropSelf(AbyssBlocks.AMBER_ROOTS.get());
+        dropSelf(AbyssBlocks.NIGHT_FUNGUS.get());
+        dropSelf(AbyssBlocks.AZURE_FUNGUS.get());
+        dropSelf(AbyssBlocks.AMBER_FUNGUS.get());
+        dropSelf(AbyssBlocks.NIGHT_BUSH.get());
+        dropSelf(AbyssBlocks.AZURE_BUSH.get());
+        dropSelf(AbyssBlocks.AMBER_BUSH.get());
 
         add(AbyssBlocks.AZURE_NYLIUM.get(),
                 block -> createSilkTouchDispatchTable(
@@ -51,21 +60,10 @@ public class AbyssBlockLootTableProvider extends BlockLootSubProvider {
                         applyExplosionDecay(block, LootItem.lootTableItem(AbyssBlocks.ABYSSTONE.get()))
                 ));
 
-        // Cevherler
         add(AbyssBlocks.ABYSS_AMARYLLIUM_ORE.get(),
                 b -> createOreDrop(AbyssBlocks.ABYSS_AMARYLLIUM_ORE.get(), AbyssItems.RAW_AMARYLLIUM.get()));
         add(AbyssBlocks.ABYSS_CRIMSONITE_ORE.get(),
                 b -> createOreDrop(AbyssBlocks.ABYSS_CRIMSONITE_ORE.get(), AbyssItems.RAW_CRIMSONITE.get()));
-
-        if (AbyssBlocks.NIGHT_ROOTS != null) dropSelf(AbyssBlocks.NIGHT_ROOTS.get());
-        if (AbyssBlocks.AZURE_ROOTS != null) dropSelf(AbyssBlocks.AZURE_ROOTS.get());
-        if (AbyssBlocks.AMBER_ROOTS != null) dropSelf(AbyssBlocks.AMBER_ROOTS.get());
-        if (AbyssBlocks.NIGHT_FUNGUS != null) dropSelf(AbyssBlocks.NIGHT_FUNGUS.get());
-        if (AbyssBlocks.AZURE_FUNGUS != null) dropSelf(AbyssBlocks.AZURE_FUNGUS.get());
-        if (AbyssBlocks.AMBER_FUNGUS != null) dropSelf(AbyssBlocks.AMBER_FUNGUS.get());
-        if (AbyssBlocks.NIGHT_BUSH != null) dropSelf(AbyssBlocks.NIGHT_BUSH.get());
-        if (AbyssBlocks.AZURE_BUSH != null) dropSelf(AbyssBlocks.AZURE_BUSH.get());
-        if (AbyssBlocks.AMBER_BUSH != null) dropSelf(AbyssBlocks.AMBER_BUSH.get());
 
         Holder<Enchantment> fortune = this.registries
                 .lookupOrThrow(Registries.ENCHANTMENT)

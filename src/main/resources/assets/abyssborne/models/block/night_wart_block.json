@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "abyssborne:block/night_nylium"
+    "all": "abyssborne:block/night_wart_block"
   }
 }

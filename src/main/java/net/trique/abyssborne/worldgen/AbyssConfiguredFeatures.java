@@ -5,8 +5,12 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
@@ -35,12 +39,12 @@ public class AbyssConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMBER_BUSH_PATCH = registerKey("amber_bush_patch");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRANGE_CLUSTER_KEY = registerKey("strange_cluster_key");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> WEIRD_CLUSTER_KEY = registerKey("weird_cluster_key");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ODD_CLUSTER_KEY = registerKey("odd_cluster_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WEIRD_CLUSTER_KEY   = registerKey("weird_cluster_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ODD_CLUSTER_KEY     = registerKey("odd_cluster_key");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURE_MASS_KEY     = registerKey("azure_mass");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NIGHT_MASS_KEY     = registerKey("night_mass");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AMBER_MASS_KEY     = registerKey("amber_mass");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURE_FUNGUS_PLANTED  = registerKey("azure_fungus_planted");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NIGHT_FUNGUS_PLANTED  = registerKey("night_fungus_planted");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMBER_FUNGUS_PLANTED  = registerKey("amber_fungus_planted");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest abyssReplaceables = new BlockMatchTest(AbyssBlocks.ABYSSTONE.get());
@@ -77,6 +81,7 @@ public class AbyssConfiguredFeatures {
                         List.of(AbyssBlocks.AMBER_NYLIUM.get(), AbyssBlocks.ABYSSTONE.get())
                 )
         );
+
         FeatureUtils.register(
                 context, NIGHT_FUNGUS_PATCH, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(
@@ -130,6 +135,7 @@ public class AbyssConfiguredFeatures {
                         List.of(AbyssBlocks.AMBER_NYLIUM.get(), AbyssBlocks.ABYSSTONE.get())
                 )
         );
+
         FeatureUtils.register(
                 context, STRANGE_CLUSTER_KEY, Feature.RANDOM_PATCH,
                 FeatureUtils.simplePatchConfiguration(
@@ -157,13 +163,47 @@ public class AbyssConfiguredFeatures {
                 )
         );
 
-        register(context, AZURE_MASS_KEY, Feature.ORE,
-                new OreConfiguration(abyssReplaceables, AbyssBlocks.AZURE_NYLIUM_MASS.get().defaultBlockState(), 8));
-        register(context, NIGHT_MASS_KEY, Feature.ORE,
-                new OreConfiguration(abyssReplaceables, AbyssBlocks.NIGHT_NYLIUM_MASS.get().defaultBlockState(), 8));
-        register(context, AMBER_MASS_KEY, Feature.ORE,
-                new OreConfiguration(abyssReplaceables, AbyssBlocks.AMBER_NYLIUM_MASS.get().defaultBlockState(), 8));
+        BlockPredicate predicate = dangerousBlockPredicate();
+        BlockState SHROOMLIGHT = Blocks.SHROOMLIGHT.defaultBlockState();
 
+        register(context, AZURE_FUNGUS_PLANTED, Feature.HUGE_FUNGUS,
+                new HugeFungusConfiguration(
+                        AbyssBlocks.AZURE_NYLIUM.get().defaultBlockState(),
+                        Blocks.OAK_LOG.defaultBlockState(),
+                        AbyssBlocks.AZURE_WART_BLOCK.get().defaultBlockState(),
+                        SHROOMLIGHT, predicate, true));
+
+        register(context, NIGHT_FUNGUS_PLANTED, Feature.HUGE_FUNGUS,
+                new HugeFungusConfiguration(
+                        AbyssBlocks.NIGHT_NYLIUM.get().defaultBlockState(),
+                        Blocks.OAK_LOG.defaultBlockState(),
+                        AbyssBlocks.NIGHT_WART_BLOCK.get().defaultBlockState(),
+                        SHROOMLIGHT, predicate, true));
+
+        register(context, AMBER_FUNGUS_PLANTED, Feature.HUGE_FUNGUS,
+                new HugeFungusConfiguration(
+                        AbyssBlocks.AMBER_NYLIUM.get().defaultBlockState(),
+                        Blocks.OAK_LOG.defaultBlockState(),
+                        AbyssBlocks.AMBER_WART_BLOCK.get().defaultBlockState(),
+                        SHROOMLIGHT, predicate, true));
+    }
+
+    private static BlockPredicate dangerousBlockPredicate() {
+        return BlockPredicate.matchesBlocks(List.of(
+                Blocks.OAK_SAPLING, Blocks.SPRUCE_SAPLING, Blocks.BIRCH_SAPLING, Blocks.JUNGLE_SAPLING,
+                Blocks.ACACIA_SAPLING, Blocks.CHERRY_SAPLING, Blocks.DARK_OAK_SAPLING, Blocks.MANGROVE_PROPAGULE,
+                Blocks.DANDELION, Blocks.TORCHFLOWER, Blocks.POPPY, Blocks.BLUE_ORCHID, Blocks.ALLIUM,
+                Blocks.AZURE_BLUET, Blocks.RED_TULIP, Blocks.ORANGE_TULIP, Blocks.WHITE_TULIP, Blocks.PINK_TULIP,
+                Blocks.OXEYE_DAISY, Blocks.CORNFLOWER, Blocks.WITHER_ROSE, Blocks.LILY_OF_THE_VALLEY,
+                Blocks.BROWN_MUSHROOM, Blocks.RED_MUSHROOM, Blocks.WHEAT, Blocks.SUGAR_CANE,
+                Blocks.ATTACHED_PUMPKIN_STEM, Blocks.ATTACHED_MELON_STEM, Blocks.PUMPKIN_STEM, Blocks.MELON_STEM,
+                Blocks.LILY_PAD, Blocks.NETHER_WART, Blocks.COCOA, Blocks.CARROTS, Blocks.POTATOES,
+                Blocks.CHORUS_PLANT, Blocks.CHORUS_FLOWER, Blocks.TORCHFLOWER_CROP, Blocks.PITCHER_CROP,
+                Blocks.BEETROOTS, Blocks.SWEET_BERRY_BUSH, Blocks.WEEPING_VINES, Blocks.WEEPING_VINES_PLANT,
+                Blocks.TWISTING_VINES, Blocks.TWISTING_VINES_PLANT, Blocks.CAVE_VINES, Blocks.CAVE_VINES_PLANT,
+                Blocks.SPORE_BLOSSOM, Blocks.AZALEA, Blocks.FLOWERING_AZALEA, Blocks.MOSS_CARPET, Blocks.PINK_PETALS,
+                Blocks.BIG_DRIPLEAF, Blocks.BIG_DRIPLEAF_STEM, Blocks.SMALL_DRIPLEAF
+        ));
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

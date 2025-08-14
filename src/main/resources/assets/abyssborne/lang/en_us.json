@@ -35,7 +35,14 @@
   "item.abyssborne.crimsonite_leggings": "Crimsonite Leggings",
   "item.abyssborne.crimsonite_boots": "Crimsonite Boots",
 
+  "block.abyssborne.abysstone": "Abysstone",
+  "block.abyssborne.abyss_portal": "Abyss Portal",
+
   "block.abyssborne.purple_lava": "Purple Lava",
+
+  "block.abyssborne.azure_wart_block": "Azure Wart Block",
+  "block.abyssborne.night_wart_block": "Night Wart Block",
+  "block.abyssborne.amber_wart_block": "Amber Wart Block",
 
   "block.abyssborne.azure_nylium": "Azure Nylium",
   "block.abyssborne.night_nylium": "Night Nylium",

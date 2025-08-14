@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "abyssborne:azure_nylium_mass"
+          "name": "abyssborne:azure_wart_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "abyssborne:blocks/azure_nylium_mass"
+  "random_sequence": "abyssborne:blocks/azure_wart_block"
 }

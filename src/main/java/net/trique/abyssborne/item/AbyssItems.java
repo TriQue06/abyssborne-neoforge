@@ -26,20 +26,20 @@ public class AbyssItems {
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<SwordItem> CRIMSONITE_SWORD = ITEMS.register("crimsonite_sword",
-            () -> new SwordItem(AbyssToolMaterials.CRIMSONITE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(AbyssToolMaterials.CRIMSONITE, 5, -2.4f))));
+            () -> new SwordItem(AbyssTiers.CRIMSONITE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(AbyssTiers.CRIMSONITE, 5, -2.4f))));
     public static final DeferredItem<PickaxeItem> CRIMSONITE_PICKAXE = ITEMS.register("crimsonite_pickaxe",
-            () -> new PickaxeItem(AbyssToolMaterials.CRIMSONITE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(AbyssToolMaterials.CRIMSONITE, 1, -2.8f))));
+            () -> new PickaxeItem(AbyssTiers.CRIMSONITE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(AbyssTiers.CRIMSONITE, 1, -2.8f))));
     public static final DeferredItem<ShovelItem> CRIMSONITE_SHOVEL = ITEMS.register("crimsonite_shovel",
-            () -> new ShovelItem(AbyssToolMaterials.CRIMSONITE, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(AbyssToolMaterials.CRIMSONITE, 1.5f, -3.0f))));
+            () -> new ShovelItem(AbyssTiers.CRIMSONITE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(AbyssTiers.CRIMSONITE, 1.5f, -3.0f))));
     public static final DeferredItem<AxeItem> CRIMSONITE_AXE = ITEMS.register("crimsonite_axe",
-            () -> new AxeItem(AbyssToolMaterials.CRIMSONITE, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(AbyssToolMaterials.CRIMSONITE, 6.0f, -3.2f))));
+            () -> new AxeItem(AbyssTiers.CRIMSONITE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(AbyssTiers.CRIMSONITE, 6.0f, -3.2f))));
     public static final DeferredItem<HoeItem> CRIMSONITE_HOE = ITEMS.register("crimsonite_hoe",
-            () -> new HoeItem(AbyssToolMaterials.CRIMSONITE, new Item.Properties()
-                    .attributes(HoeItem.createAttributes(AbyssToolMaterials.CRIMSONITE, 0f, -3.0f))));
+            () -> new HoeItem(AbyssTiers.CRIMSONITE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(AbyssTiers.CRIMSONITE, 0f, -3.0f))));
 
     public static final DeferredItem<ArmorItem> CRIMSONITE_HELMET = ITEMS.register("crimsonite_helmet",
             () -> new ArmorItem(AbyssArmorMaterials.CRIMSONITE, ArmorItem.Type.HELMET,
@@ -60,20 +60,20 @@ public class AbyssItems {
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<SwordItem> AMARYLLIUM_SWORD = ITEMS.register("amaryllium_sword",
-            () -> new SwordItem(AbyssToolMaterials.AMARYLLIUM, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(AbyssToolMaterials.AMARYLLIUM, 5, -2.4f))));
+            () -> new SwordItem(AbyssTiers.AMARYLLIUM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(AbyssTiers.AMARYLLIUM, 5, -2.4f))));
     public static final DeferredItem<PickaxeItem> AMARYLLIUM_PICKAXE = ITEMS.register("amaryllium_pickaxe",
-            () -> new PickaxeItem(AbyssToolMaterials.AMARYLLIUM, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(AbyssToolMaterials.AMARYLLIUM, 1, -2.8f))));
+            () -> new PickaxeItem(AbyssTiers.AMARYLLIUM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(AbyssTiers.AMARYLLIUM, 1, -2.8f))));
     public static final DeferredItem<ShovelItem> AMARYLLIUM_SHOVEL = ITEMS.register("amaryllium_shovel",
-            () -> new ShovelItem(AbyssToolMaterials.AMARYLLIUM, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(AbyssToolMaterials.AMARYLLIUM, 1.5f, -3.0f))));
+            () -> new ShovelItem(AbyssTiers.AMARYLLIUM, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(AbyssTiers.AMARYLLIUM, 1.5f, -3.0f))));
     public static final DeferredItem<AxeItem> AMARYLLIUM_AXE = ITEMS.register("amaryllium_axe",
-            () -> new AxeItem(AbyssToolMaterials.AMARYLLIUM, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(AbyssToolMaterials.AMARYLLIUM, 6.0f, -3.2f))));
+            () -> new AxeItem(AbyssTiers.AMARYLLIUM, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(AbyssTiers.AMARYLLIUM, 6.0f, -3.2f))));
     public static final DeferredItem<HoeItem> AMARYLLIUM_HOE = ITEMS.register("amaryllium_hoe",
-            () -> new HoeItem(AbyssToolMaterials.AMARYLLIUM, new Item.Properties()
-                    .attributes(HoeItem.createAttributes(AbyssToolMaterials.AMARYLLIUM, 0f, -3.0f))));
+            () -> new HoeItem(AbyssTiers.AMARYLLIUM, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(AbyssTiers.AMARYLLIUM, 0f, -3.0f))));
 
     public static final DeferredItem<ArmorItem> AMARYLLIUM_HELMET = ITEMS.register("amaryllium_helmet",
             () -> new ArmorItem(AbyssArmorMaterials.AMARYLLIUM, ArmorItem.Type.HELMET,

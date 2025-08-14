@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "#abyssborne:is_azure_grove",
-  "features": "abyssborne:azure_mass_placed",
-  "step": "underground_ores"
+  "features": "abyssborne:azure_fungi",
+  "step": "vegetal_decoration"
 }

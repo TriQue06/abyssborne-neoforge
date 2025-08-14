@@ -14,7 +14,6 @@ import net.trique.abyssborne.Abyssborne;
 import java.util.List;
 
 public class AbyssPlacedFeatures {
-
     public static final ResourceKey<PlacedFeature> AMARYLLIUM_ORE_PLACED_KEY = registerKey("amaryllium_ore_placed");
     public static final ResourceKey<PlacedFeature> CRIMSONITE_ORE_PLACED_KEY = registerKey("crimsonite_ore_placed");
 
@@ -34,9 +33,9 @@ public class AbyssPlacedFeatures {
     public static final ResourceKey<PlacedFeature> WEIRD_CLUSTER_PLACED = registerKey("weird_cluster_placed");
     public static final ResourceKey<PlacedFeature> ODD_CLUSTER_PLACED = registerKey("odd_cluster_placed");
 
-    public static final ResourceKey<PlacedFeature> AZURE_MASS_PLACED_KEY = registerKey("azure_mass_placed");
-    public static final ResourceKey<PlacedFeature> NIGHT_MASS_PLACED_KEY = registerKey("night_mass_placed");
-    public static final ResourceKey<PlacedFeature> AMBER_MASS_PLACED_KEY = registerKey("amber_mass_placed");
+    public static final ResourceKey<PlacedFeature> AZURE_FUNGI  = registerKey("azure_fungi");
+    public static final ResourceKey<PlacedFeature> NIGHT_FUNGI  = registerKey("night_fungi");
+    public static final ResourceKey<PlacedFeature> AMBER_FUNGI  = registerKey("amber_fungi");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configured = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -115,24 +114,24 @@ public class AbyssPlacedFeatures {
                 rootsModifiers(1)
         );
 
-        register(context, AZURE_MASS_PLACED_KEY,
-                configured.getOrThrow(AbyssConfiguredFeatures.AZURE_MASS_KEY),
-                AbyssOrePlacement.commonOrePlacement(
-                        30, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+        register(context, AZURE_FUNGI,
+                configured.getOrThrow(AbyssConfiguredFeatures.AZURE_FUNGUS_PLANTED),
+                List.of(
+                        CountOnEveryLayerPlacement.of(8)
                 )
         );
 
-        register(context, NIGHT_MASS_PLACED_KEY,
-                configured.getOrThrow(AbyssConfiguredFeatures.NIGHT_MASS_KEY),
-                AbyssOrePlacement.commonOrePlacement(
-                        30, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+        register(context, NIGHT_FUNGI,
+                configured.getOrThrow(AbyssConfiguredFeatures.NIGHT_FUNGUS_PLANTED),
+                List.of(
+                        CountOnEveryLayerPlacement.of(8)
                 )
         );
 
-        register(context, AMBER_MASS_PLACED_KEY,
-                configured.getOrThrow(AbyssConfiguredFeatures.AMBER_MASS_KEY),
-                AbyssOrePlacement.commonOrePlacement(
-                        30, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(128))
+        register(context, AMBER_FUNGI,
+                configured.getOrThrow(AbyssConfiguredFeatures.AMBER_FUNGUS_PLANTED),
+                List.of(
+                        CountOnEveryLayerPlacement.of(8)
                 )
         );
     }
@@ -141,8 +140,7 @@ public class AbyssPlacedFeatures {
         return List.of(
                 RarityFilter.onAverageOnceEvery(averageOnceEvery),
                 InSquarePlacement.spread(),
-                PlacementUtils.FULL_RANGE,
-                BiomeFilter.biome()
+                PlacementUtils.FULL_RANGE
         );
     }
 

@@ -75,9 +75,9 @@ public class AbyssCreativeModeTabs {
                         output.accept(AbyssBlocks.STRANGE_CLUSTER);
                         output.accept(AbyssBlocks.WEIRD_CLUSTER);
                         output.accept(AbyssBlocks.ODD_CLUSTER);
-                        output.accept(AbyssBlocks.AZURE_NYLIUM_MASS);
-                        output.accept(AbyssBlocks.NIGHT_NYLIUM_MASS);
-                        output.accept(AbyssBlocks.AMBER_NYLIUM_MASS);
+                        output.accept(AbyssBlocks.AZURE_WART_BLOCK);
+                        output.accept(AbyssBlocks.NIGHT_WART_BLOCK);
+                        output.accept(AbyssBlocks.AMBER_WART_BLOCK);
                     }).build());
 
     public static void register(IEventBus eventBus) {
