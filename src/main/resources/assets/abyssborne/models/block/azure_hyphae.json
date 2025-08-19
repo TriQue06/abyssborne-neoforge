@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "abyssborne:block/azure_stem",
+    "side": "abyssborne:block/azure_stem"
+  }
+}

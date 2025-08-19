@@ -36,6 +36,11 @@ public class AbyssBlockTagProvider extends BlockTagsProvider {
                 .add(AbyssBlocks.NIGHT_WART_BLOCK.get())
                 .add(AbyssBlocks.AMBER_WART_BLOCK.get());
 
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(AbyssBlocks.AZURE_HYPHAE.get())
+                .add(AbyssBlocks.NIGHT_HYPHAE.get())
+                .add(AbyssBlocks.AMBER_HYPHAE.get());
+
         tag(BlockTags.CRYSTAL_SOUND_BLOCKS)
                 .add(AbyssBlocks.STRANGE_CLUSTER.get())
                 .add(AbyssBlocks.WEIRD_CLUSTER.get())

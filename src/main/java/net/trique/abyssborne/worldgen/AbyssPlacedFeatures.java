@@ -117,21 +117,21 @@ public class AbyssPlacedFeatures {
         register(context, AZURE_FUNGI,
                 configured.getOrThrow(AbyssConfiguredFeatures.AZURE_FUNGUS_PLANTED),
                 List.of(
-                        CountOnEveryLayerPlacement.of(8)
+                        CountOnEveryLayerPlacement.of(6)
                 )
         );
 
         register(context, NIGHT_FUNGI,
                 configured.getOrThrow(AbyssConfiguredFeatures.NIGHT_FUNGUS_PLANTED),
                 List.of(
-                        CountOnEveryLayerPlacement.of(8)
+                        CountOnEveryLayerPlacement.of(6)
                 )
         );
 
         register(context, AMBER_FUNGI,
                 configured.getOrThrow(AbyssConfiguredFeatures.AMBER_FUNGUS_PLANTED),
                 List.of(
-                        CountOnEveryLayerPlacement.of(8)
+                        CountOnEveryLayerPlacement.of(6)
                 )
         );
     }

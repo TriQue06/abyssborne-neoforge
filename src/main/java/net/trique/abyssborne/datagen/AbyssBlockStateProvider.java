@@ -46,6 +46,11 @@ public class AbyssBlockStateProvider extends BlockStateProvider {
         clusterBlockWithItem(AbyssBlocks.STRANGE_CLUSTER);
         clusterBlockWithItem(AbyssBlocks.WEIRD_CLUSTER);
         clusterBlockWithItem(AbyssBlocks.ODD_CLUSTER);
+
+        hyphaeBlockWithItem(AbyssBlocks.AZURE_HYPHAE, "azure_stem");
+        hyphaeBlockWithItem(AbyssBlocks.NIGHT_HYPHAE, "night_stem");
+        hyphaeBlockWithItem(AbyssBlocks.AMBER_HYPHAE, "amber_stem");
+
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
@@ -107,4 +112,16 @@ public class AbyssBlockStateProvider extends BlockStateProvider {
                             .build();
                 }, BlockStateProperties.WATERLOGGED);
     }
+
+    private void hyphaeBlockWithItem(DeferredBlock<?> block, String stemTextureName) {
+        String name = block.getId().getPath();
+
+        // hem side hem end aynı stem dokusu
+        simpleBlockWithItem(block.get(),
+                models().cubeColumn(name,
+                        modLoc("block/" + stemTextureName),
+                        modLoc("block/" + stemTextureName)
+                ));
+    }
+
 }
