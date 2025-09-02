@@ -16,8 +16,8 @@ import net.trique.abyssborne.material.AbyssFluids;
 
 @Mod(value = Abyssborne.MODID, dist = Dist.CLIENT)
 @EventBusSubscriber(modid = Abyssborne.MODID, value = Dist.CLIENT)
-public class AbyssborneClient {
 
+public class AbyssborneClient {
     public AbyssborneClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
