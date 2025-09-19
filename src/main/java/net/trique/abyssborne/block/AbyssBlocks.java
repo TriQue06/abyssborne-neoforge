@@ -245,6 +245,27 @@ public class AbyssBlocks {
                     .sound(SoundType.NETHER_WOOD)
                     .lightLevel(state -> 5)));
 
+    public static final DeferredBlock<Block> AZURE_PLANKS = registerBlock("azure_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.NETHER_WOOD)));
+
+    public static final DeferredBlock<Block> NIGHT_PLANKS = registerBlock("night_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.NETHER_WOOD)));
+
+    public static final DeferredBlock<Block> AMBER_PLANKS = registerBlock("amber_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.NETHER_WOOD)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

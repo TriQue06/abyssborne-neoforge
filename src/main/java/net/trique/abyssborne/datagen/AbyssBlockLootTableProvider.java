@@ -44,6 +44,9 @@ public class AbyssBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(AbyssBlocks.NIGHT_HYPHAE.get());
         dropSelf(AbyssBlocks.AZURE_HYPHAE.get());
         dropSelf(AbyssBlocks.AMBER_HYPHAE.get());
+        dropSelf(AbyssBlocks.NIGHT_PLANKS.get());
+        dropSelf(AbyssBlocks.AZURE_PLANKS.get());
+        dropSelf(AbyssBlocks.AMBER_PLANKS.get());
 
         add(AbyssBlocks.AZURE_NYLIUM.get(),
                 block -> createSilkTouchDispatchTable(

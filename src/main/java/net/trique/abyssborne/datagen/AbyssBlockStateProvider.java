@@ -26,6 +26,9 @@ public class AbyssBlockStateProvider extends BlockStateProvider {
         blockWithItem(AbyssBlocks.AZURE_WART_BLOCK);
         blockWithItem(AbyssBlocks.NIGHT_WART_BLOCK);
         blockWithItem(AbyssBlocks.AMBER_WART_BLOCK);
+        blockWithItem(AbyssBlocks.AZURE_PLANKS);
+        blockWithItem(AbyssBlocks.NIGHT_PLANKS);
+        blockWithItem(AbyssBlocks.AMBER_PLANKS);
 
         nyliumBlockWithItem(AbyssBlocks.AZURE_NYLIUM, "abysstone");
         nyliumBlockWithItem(AbyssBlocks.NIGHT_NYLIUM, "abysstone");

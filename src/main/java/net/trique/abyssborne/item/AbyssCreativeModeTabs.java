@@ -78,6 +78,12 @@ public class AbyssCreativeModeTabs {
                         output.accept(AbyssBlocks.AZURE_WART_BLOCK);
                         output.accept(AbyssBlocks.NIGHT_WART_BLOCK);
                         output.accept(AbyssBlocks.AMBER_WART_BLOCK);
+                        output.accept(AbyssBlocks.AZURE_HYPHAE);
+                        output.accept(AbyssBlocks.NIGHT_HYPHAE);
+                        output.accept(AbyssBlocks.AMBER_HYPHAE);
+                        output.accept(AbyssBlocks.AZURE_PLANKS);
+                        output.accept(AbyssBlocks.NIGHT_PLANKS);
+                        output.accept(AbyssBlocks.AMBER_PLANKS);
                     }).build());
 
     public static void register(IEventBus eventBus) {
